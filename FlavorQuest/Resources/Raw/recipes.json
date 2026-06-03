@@ -1,0 +1,1338 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Pancakes",
+    "category": "Breakfast",
+    "description": "Fluffy golden pancakes perfect for a weekend breakfast. Serve with maple syrup and fresh berries.",
+    "imageUrl": "pancakes.png",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 15,
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 1/2 cups all-purpose flour",
+      "3 1/2 teaspoons baking powder",
+      "1 tablespoon sugar",
+      "1/4 teaspoon salt",
+      "1 1/4 cups milk",
+      "1 egg",
+      "3 tablespoons melted butter",
+      "Maple syrup for serving",
+      "Fresh berries for garnish"
+    ],
+    "instructions": [
+      "In a large bowl, sift together flour, baking powder, sugar, and salt.",
+      "Make a well in the center and pour in milk, egg, and melted butter. Mix until smooth.",
+      "Heat a griddle or frying pan over medium-high heat. Grease lightly with butter.",
+      "Pour about 1/4 cup of batter onto the griddle for each pancake.",
+      "Cook until bubbles form on the surface, then flip and cook until golden brown on both sides.",
+      "Serve hot with maple syrup and fresh berries."
+    ],
+    "nutritionPerServing": {
+      "calories": 250,
+      "proteinGrams": 7.0,
+      "carbsGrams": 35.0,
+      "fatGrams": 9.0
+    },
+    "tags": ["breakfast", "sweet", "quick", "classic", "kid-friendly"]
+  },
+  {
+    "id": 2,
+    "name": "Avocado Toast with Poached Egg",
+    "category": "Breakfast",
+    "description": "Trendy and nutritious avocado toast topped with a perfectly poached egg and chili flakes.",
+    "imageUrl": "avocado_toast.png",
+    "prepTimeMinutes": 5,
+    "cookTimeMinutes": 8,
+    "servings": 2,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 slices sourdough bread",
+      "1 ripe avocado",
+      "2 eggs",
+      "1 tablespoon white vinegar",
+      "Red chili flakes to taste",
+      "Salt and pepper to taste",
+      "Lemon juice",
+      "Cherry tomatoes for garnish"
+    ],
+    "instructions": [
+      "Toast sourdough bread slices until golden and crispy.",
+      "Halve the avocado, remove pit, and scoop flesh into a bowl. Mash with a fork.",
+      "Season mashed avocado with salt, pepper, and a squeeze of lemon juice.",
+      "Bring a pot of water to a gentle simmer and add white vinegar.",
+      "Create a gentle whirlpool in the water and carefully crack in each egg. Poach for 3-4 minutes.",
+      "Spread mashed avocado on toast, top with poached egg, and sprinkle chili flakes. Serve immediately."
+    ],
+    "nutritionPerServing": {
+      "calories": 320,
+      "proteinGrams": 14.0,
+      "carbsGrams": 28.0,
+      "fatGrams": 18.0
+    },
+    "tags": ["breakfast", "healthy", "trendy", "quick", "avocado"]
+  },
+  {
+    "id": 3,
+    "name": "Greek Yogurt Parfait",
+    "category": "Breakfast",
+    "description": "A healthy and refreshing breakfast parfait layered with Greek yogurt, granola, and mixed berries.",
+    "imageUrl": "parfait.png",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 0,
+    "servings": 2,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 cups Greek yogurt",
+      "1 cup granola",
+      "1 cup mixed berries (strawberries, blueberries, raspberries)",
+      "2 tablespoons honey",
+      "1 tablespoon chia seeds",
+      "Mint leaves for garnish"
+    ],
+    "instructions": [
+      "Wash and dry the berries. Slice strawberries if using.",
+      "In two glasses or bowls, layer Greek yogurt at the bottom.",
+      "Add a layer of granola, then a layer of mixed berries.",
+      "Repeat layers until glasses are full.",
+      "Drizzle with honey and sprinkle chia seeds on top.",
+      "Garnish with mint leaves and serve immediately."
+    ],
+    "nutritionPerServing": {
+      "calories": 290,
+      "proteinGrams": 18.0,
+      "carbsGrams": 42.0,
+      "fatGrams": 6.0
+    },
+    "tags": ["breakfast", "healthy", "no-cook", "quick", "kid-friendly"]
+  },
+  {
+    "id": 4,
+    "name": "Classic Club Sandwich",
+    "category": "Lunch",
+    "description": "A towering triple-decker sandwich loaded with turkey, bacon, lettuce, and tomato.",
+    "imageUrl": "club_sandwich.png",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 10,
+    "servings": 2,
+    "difficulty": "Easy",
+    "ingredients": [
+      "6 slices bread, toasted",
+      "8 slices roasted turkey breast",
+      "8 slices crispy bacon",
+      "4 lettuce leaves",
+      "2 tomatoes, sliced",
+      "Mayonnaise",
+      "Salt and pepper to taste",
+      "Toothpicks for assembly"
+    ],
+    "instructions": [
+      "Toast all bread slices until golden. Cook bacon until crispy.",
+      "Spread mayonnaise on one side of each toast slice.",
+      "Layer one slice with lettuce, tomato, turkey, and bacon. Season with salt and pepper.",
+      "Add second slice of toast and repeat layering.",
+      "Top with third slice of toast. Secure with toothpicks.",
+      "Cut diagonally into quarters and serve with chips or a side salad."
+    ],
+    "nutritionPerServing": {
+      "calories": 580,
+      "proteinGrams": 35.0,
+      "carbsGrams": 42.0,
+      "fatGrams": 28.0
+    },
+    "tags": ["lunch", "sandwich", "classic", "turkey", "bacon"]
+  },
+  {
+    "id": 5,
+    "name": "Caesar Salad",
+    "category": "Salad",
+    "description": "A classic Caesar salad with crisp romaine lettuce, homemade croutons, parmesan, and creamy dressing.",
+    "imageUrl": "caesar_salad.png",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 10,
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 heads romaine lettuce, chopped",
+      "1 cup croutons",
+      "1/2 cup shaved Parmesan cheese",
+      "2 anchovy fillets (optional)",
+      "1 egg yolk",
+      "2 garlic cloves, minced",
+      "2 tablespoons lemon juice",
+      "1 teaspoon Dijon mustard",
+      "1/2 cup olive oil",
+      "Salt and black pepper to taste"
+    ],
+    "instructions": [
+      "To make dressing: whisk egg yolk, minced garlic, lemon juice, and Dijon mustard together.",
+      "Slowly drizzle in olive oil while whisking continuously until emulsified.",
+      "Mash anchovy fillets and stir into the dressing. Season with salt and pepper.",
+      "Toss chopped romaine lettuce with enough dressing to coat evenly.",
+      "Top with croutons and shaved Parmesan cheese.",
+      "Serve immediately as a main course or side dish."
+    ],
+    "nutritionPerServing": {
+      "calories": 280,
+      "proteinGrams": 10.0,
+      "carbsGrams": 12.0,
+      "fatGrams": 22.0
+    },
+    "tags": ["salad", "classic", "lunch", "healthy", "quick"]
+  },
+  {
+    "id": 6,
+    "name": "Greek Salad",
+    "category": "Salad",
+    "description": "A refreshing Mediterranean salad with tomatoes, cucumber, olives, and feta cheese.",
+    "imageUrl": "greek_salad.png",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 0,
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "4 large tomatoes, cut into wedges",
+      "1 cucumber, diced",
+      "1 red onion, thinly sliced",
+      "1 green bell pepper, sliced",
+      "1 cup Kalamata olives",
+      "200g feta cheese, cubed",
+      "3 tablespoons extra virgin olive oil",
+      "1 tablespoon red wine vinegar",
+      "1 teaspoon dried oregano",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "Combine tomatoes, cucumber, red onion, and bell pepper in a large bowl.",
+      "Add Kalamata olives and gently toss.",
+      "Top with cubed feta cheese.",
+      "Drizzle with olive oil and red wine vinegar.",
+      "Sprinkle with dried oregano and salt.",
+      "Serve immediately with crusty bread."
+    ],
+    "nutritionPerServing": {
+      "calories": 240,
+      "proteinGrams": 8.0,
+      "carbsGrams": 14.0,
+      "fatGrams": 18.0
+    },
+    "tags": ["salad", "mediterranean", "healthy", "no-cook", "vegetarian"]
+  },
+  {
+    "id": 7,
+    "name": "Spaghetti Carbonara",
+    "category": "Pasta",
+    "description": "An authentic Italian carbonara with eggs, pecorino cheese, guanciale, and black pepper — no cream!",
+    "imageUrl": "carbonara.png",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 20,
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "400g spaghetti",
+      "200g guanciale or pancetta, diced",
+      "4 large egg yolks",
+      "2 whole eggs",
+      "1 cup grated Pecorino Romano cheese",
+      "2 teaspoons freshly cracked black pepper",
+      "Salt for pasta water"
+    ],
+    "instructions": [
+      "Bring a large pot of salted water to a boil and cook spaghetti until al dente.",
+      "While pasta cooks, render guanciale in a cold pan over medium heat until crispy and fat is released.",
+      "In a bowl, whisk together egg yolks, whole eggs, grated Pecorino, and black pepper.",
+      "Reserve 1 cup of pasta water before draining.",
+      "Remove guanciale pan from heat. Add drained pasta and toss with the rendered fat.",
+      "Pour egg mixture over pasta, tossing vigorously. Add pasta water as needed for a creamy consistency.",
+      "Serve immediately with extra Pecorino and black pepper on top."
+    ],
+    "nutritionPerServing": {
+      "calories": 620,
+      "proteinGrams": 28.0,
+      "carbsGrams": 65.0,
+      "fatGrams": 26.0
+    },
+    "tags": ["pasta", "italian", "dinner", "classic", "carbonara"]
+  },
+  {
+    "id": 8,
+    "name": "Fettuccine Alfredo",
+    "category": "Pasta",
+    "description": "Rich and creamy fettuccine Alfredo made with real butter, cream, and Parmigiano-Reggiano.",
+    "imageUrl": "alfredo.png",
+    "prepTimeMinutes": 5,
+    "cookTimeMinutes": 15,
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "400g fettuccine pasta",
+      "1/2 cup unsalted butter",
+      "2 cups heavy cream",
+      "2 cups freshly grated Parmigiano-Reggiano",
+      "2 garlic cloves, minced",
+      "Salt and white pepper to taste",
+      "Fresh parsley for garnish"
+    ],
+    "instructions": [
+      "Cook fettuccine in salted boiling water until al dente. Reserve 1 cup of pasta water.",
+      "In a large pan, melt butter over medium heat. Add minced garlic and sauté for 1 minute.",
+      "Pour in heavy cream and bring to a gentle simmer. Cook for 2-3 minutes until slightly thickened.",
+      "Stir in grated Parmigiano-Reggiano until melted and smooth.",
+      "Add drained pasta to the sauce, tossing to coat. Add pasta water if too thick.",
+      "Season with salt and white pepper. Garnish with parsley and serve immediately."
+    ],
+    "nutritionPerServing": {
+      "calories": 720,
+      "proteinGrams": 24.0,
+      "carbsGrams": 62.0,
+      "fatGrams": 42.0
+    },
+    "tags": ["pasta", "italian", "dinner", "creamy", "comfort-food"]
+  },
+  {
+    "id": 9,
+    "name": "Tomato Basil Soup",
+    "category": "Soup",
+    "description": "A velvety smooth tomato soup with fresh basil, perfect with a grilled cheese sandwich.",
+    "imageUrl": "tomato_soup.png",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 30,
+    "servings": 6,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 cans (800g) whole peeled tomatoes",
+      "1 onion, diced",
+      "4 garlic cloves, minced",
+      "2 cups vegetable broth",
+      "1/2 cup heavy cream (optional)",
+      "1/4 cup fresh basil leaves",
+      "2 tablespoons olive oil",
+      "1 teaspoon sugar",
+      "Salt and black pepper to taste",
+      "Croutons for garnish"
+    ],
+    "instructions": [
+      "Heat olive oil in a large pot over medium heat. Sauté onion until translucent, about 5 minutes.",
+      "Add minced garlic and cook for 1 more minute until fragrant.",
+      "Add canned tomatoes with their juices, vegetable broth, and sugar. Bring to a boil.",
+      "Reduce heat and simmer for 20 minutes, stirring occasionally.",
+      "Remove from heat. Add fresh basil and blend with an immersion blender until smooth.",
+      "Stir in heavy cream if desired. Season with salt and pepper. Serve with croutons on top."
+    ],
+    "nutritionPerServing": {
+      "calories": 150,
+      "proteinGrams": 3.0,
+      "carbsGrams": 16.0,
+      "fatGrams": 9.0
+    },
+    "tags": ["soup", "comfort-food", "lunch", "vegetarian", "classic"]
+  },
+  {
+    "id": 10,
+    "name": "Chicken Noodle Soup",
+    "category": "Soup",
+    "description": "A hearty, healing chicken noodle soup with tender chicken, vegetables, and egg noodles.",
+    "imageUrl": "chicken_soup.png",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 35,
+    "servings": 6,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 chicken breasts, diced",
+      "2 carrots, sliced",
+      "2 celery stalks, sliced",
+      "1 onion, diced",
+      "3 garlic cloves, minced",
+      "8 cups chicken broth",
+      "2 cups egg noodles",
+      "2 tablespoons olive oil",
+      "1 teaspoon dried thyme",
+      "1 bay leaf",
+      "Salt and pepper to taste",
+      "Fresh parsley for garnish"
+    ],
+    "instructions": [
+      "Heat olive oil in a large pot. Cook diced chicken until lightly browned. Remove and set aside.",
+      "In the same pot, sauté onion, carrots, and celery for 5 minutes until softened.",
+      "Add garlic, thyme, and bay leaf. Cook for 1 minute.",
+      "Pour in chicken broth and bring to a boil. Return chicken to the pot.",
+      "Add egg noodles and simmer for 10-12 minutes until noodles are tender.",
+      "Season with salt and pepper. Remove bay leaf. Garnish with parsley and serve hot."
+    ],
+    "nutritionPerServing": {
+      "calories": 220,
+      "proteinGrams": 20.0,
+      "carbsGrams": 18.0,
+      "fatGrams": 7.0
+    },
+    "tags": ["soup", "comfort-food", "dinner", "chicken", "healthy"]
+  },
+  {
+    "id": 11,
+    "name": "Grilled Salmon with Lemon Dill",
+    "category": "Seafood",
+    "description": "Perfectly grilled salmon fillets with a bright lemon dill sauce and crispy skin.",
+    "imageUrl": "salmon.png",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 12,
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "4 salmon fillets (150g each), skin on",
+      "2 lemons (one sliced, one juiced)",
+      "3 tablespoons fresh dill, chopped",
+      "3 tablespoons olive oil",
+      "2 garlic cloves, minced",
+      "1 tablespoon Dijon mustard",
+      "Salt and black pepper to taste",
+      "Steamed asparagus for serving"
+    ],
+    "instructions": [
+      "Mix olive oil, lemon juice, dill, garlic, and Dijon mustard to make the marinade.",
+      "Season salmon fillets with salt and pepper. Coat with marinade and rest for 10 minutes.",
+      "Preheat grill or grill pan to medium-high heat.",
+      "Place salmon skin-side down. Cook for 4-5 minutes until skin is crispy.",
+      "Flip carefully and cook for another 3-4 minutes until just cooked through.",
+      "Serve with lemon slices, steamed asparagus, and remaining dill sauce drizzled on top."
+    ],
+    "nutritionPerServing": {
+      "calories": 380,
+      "proteinGrams": 34.0,
+      "carbsGrams": 4.0,
+      "fatGrams": 24.0
+    },
+    "tags": ["seafood", "dinner", "healthy", "grilled", "omega-3"]
+  },
+  {
+    "id": 12,
+    "name": "Garlic Butter Shrimp",
+    "category": "Seafood",
+    "description": "Succulent shrimp sautéed in garlic butter with a touch of lemon and parsley. Quick and impressive!",
+    "imageUrl": "shrimp.png",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 8,
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "500g large shrimp, peeled and deveined",
+      "4 tablespoons butter",
+      "6 garlic cloves, minced",
+      "1/4 cup white wine (optional)",
+      "Juice of 1 lemon",
+      "1/4 cup fresh parsley, chopped",
+      "Red pepper flakes to taste",
+      "Salt and black pepper to taste",
+      "Crusty bread for serving"
+    ],
+    "instructions": [
+      "Pat shrimp dry with paper towels and season with salt and pepper.",
+      "Melt butter in a large skillet over medium-high heat.",
+      "Add minced garlic and red pepper flakes. Sauté for 30 seconds until fragrant.",
+      "Add shrimp in a single layer. Cook for 2 minutes per side until pink and opaque.",
+      "Deglaze with white wine (if using) and lemon juice. Let bubble for 1 minute.",
+      "Sprinkle with parsley and serve immediately with crusty bread for dipping."
+    ],
+    "nutritionPerServing": {
+      "calories": 280,
+      "proteinGrams": 30.0,
+      "carbsGrams": 3.0,
+      "fatGrams": 16.0
+    },
+    "tags": ["seafood", "dinner", "quick", "garlic", "shrimp"]
+  },
+  {
+    "id": 13,
+    "name": "Beef Steak with Peppercorn Sauce",
+    "category": "Dinner",
+    "description": "A perfectly seared beef steak served with a rich, creamy peppercorn sauce and roasted potatoes.",
+    "imageUrl": "steak.png",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 20,
+    "servings": 2,
+    "difficulty": "Hard",
+    "ingredients": [
+      "2 ribeye or sirloin steaks (250g each)",
+      "2 tablespoons vegetable oil",
+      "2 tablespoons butter",
+      "2 garlic cloves, crushed",
+      "2 sprigs fresh rosemary",
+      "1/2 cup beef broth",
+      "1/2 cup heavy cream",
+      "2 tablespoons green peppercorns, crushed",
+      "1 tablespoon brandy (optional)",
+      "Salt and black pepper to taste"
+    ],
+    "instructions": [
+      "Remove steaks from fridge 30 minutes before cooking. Pat dry and season generously with salt and pepper.",
+      "Heat oil in a cast-iron skillet over high heat until smoking hot.",
+      "Sear steaks for 3-4 minutes per side for medium-rare, basting with butter, garlic, and rosemary.",
+      "Rest steaks on a plate covered loosely with foil for 5-10 minutes.",
+      "For the sauce: drain excess fat, add brandy and flame if using. Add beef broth and reduce by half.",
+      "Stir in cream and crushed peppercorns. Simmer until thickened. Serve over sliced steak."
+    ],
+    "nutritionPerServing": {
+      "calories": 650,
+      "proteinGrams": 48.0,
+      "carbsGrams": 4.0,
+      "fatGrams": 48.0
+    },
+    "tags": ["dinner", "steak", "special", "meat", "date-night"]
+  },
+  {
+    "id": 14,
+    "name": "Chicken Tikka Masala",
+    "category": "Dinner",
+    "description": "Tender chunks of marinated chicken in a creamy, spiced tomato curry sauce. A British favorite!",
+    "imageUrl": "tikka_masala.png",
+    "prepTimeMinutes": 30,
+    "cookTimeMinutes": 30,
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "500g chicken breast, cubed",
+      "1 cup plain yogurt",
+      "2 tablespoons tandoori masala",
+      "2 onions, finely diced",
+      "4 garlic cloves, minced",
+      "1 tablespoon grated ginger",
+      "400g canned crushed tomatoes",
+      "1 cup heavy cream",
+      "2 teaspoons garam masala",
+      "1 teaspoon turmeric",
+      "1 teaspoon cumin",
+      "Fresh cilantro for garnish",
+      "Basmati rice for serving"
+    ],
+    "instructions": [
+      "Marinate chicken with yogurt and tandoori masala for at least 30 minutes (or overnight).",
+      "Grill or broil marinated chicken until charred spots appear. Set aside.",
+      "In a large pan, sauté onions until golden. Add garlic and ginger, cook 1 minute.",
+      "Add turmeric, cumin, and garam masala. Cook until fragrant.",
+      "Add crushed tomatoes and simmer for 15 minutes until thickened.",
+      "Stir in cream and grilled chicken. Simmer 10 minutes. Garnish with cilantro. Serve with rice."
+    ],
+    "nutritionPerServing": {
+      "calories": 450,
+      "proteinGrams": 35.0,
+      "carbsGrams": 20.0,
+      "fatGrams": 26.0
+    },
+    "tags": ["dinner", "indian", "curry", "chicken", "spicy"]
+  },
+  {
+    "id": 15,
+    "name": "Vegetable Stir Fry",
+    "category": "Dinner",
+    "description": "A colorful and crunchy vegetable stir fry with a savory soy-ginger sauce. Ready in minutes!",
+    "imageUrl": "stir_fry.png",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 10,
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 cups broccoli florets",
+      "1 red bell pepper, sliced",
+      "1 carrot, julienned",
+      "1 cup snap peas",
+      "1 cup mushrooms, sliced",
+      "3 tablespoons soy sauce",
+      "1 tablespoon sesame oil",
+      "2 garlic cloves, minced",
+      "1 tablespoon grated ginger",
+      "1 tablespoon cornstarch mixed with 2 tbsp water",
+      "Sesame seeds for garnish",
+      "Steamed rice for serving"
+    ],
+    "instructions": [
+      "Prep all vegetables before cooking — stir-frying happens fast!",
+      "Heat sesame oil in a wok or large skillet over high heat until nearly smoking.",
+      "Add garlic and ginger, stir for 15 seconds.",
+      "Add harder vegetables first (broccoli, carrots). Stir-fry for 2 minutes.",
+      "Add bell pepper, snap peas, and mushrooms. Stir-fry for 2 more minutes.",
+      "Add soy sauce and cornstarch slurry. Toss until sauce thickens. Garnish with sesame seeds. Serve over rice."
+    ],
+    "nutritionPerServing": {
+      "calories": 180,
+      "proteinGrams": 7.0,
+      "carbsGrams": 24.0,
+      "fatGrams": 7.0
+    },
+    "tags": ["dinner", "vegetarian", "quick", "healthy", "asian"]
+  },
+  {
+    "id": 16,
+    "name": "Chocolate Lava Cake",
+    "category": "Dessert",
+    "description": "Decadent individual chocolate cakes with a molten, gooey center. A show-stopping dessert!",
+    "imageUrl": "lava_cake.png",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 14,
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "200g dark chocolate (70% cocoa)",
+      "1/2 cup unsalted butter",
+      "2 whole eggs",
+      "2 egg yolks",
+      "1/4 cup sugar",
+      "2 tablespoons all-purpose flour",
+      "Pinch of salt",
+      "Butter and cocoa powder for ramekins",
+      "Vanilla ice cream for serving"
+    ],
+    "instructions": [
+      "Preheat oven to 220°C (425°F). Butter and dust 4 ramekins with cocoa powder.",
+      "Melt chocolate and butter together in a double boiler. Let cool slightly.",
+      "Whisk eggs, egg yolks, and sugar until thick and pale, about 3 minutes.",
+      "Fold chocolate mixture into egg mixture. Sift in flour and salt. Fold gently.",
+      "Divide batter among ramekins. Bake for 12-14 minutes until edges are set but center jiggles.",
+      "Let cool for 1 minute. Run a knife around the edge and invert onto plates. Serve with ice cream."
+    ],
+    "nutritionPerServing": {
+      "calories": 480,
+      "proteinGrams": 8.0,
+      "carbsGrams": 38.0,
+      "fatGrams": 34.0
+    },
+    "tags": ["dessert", "chocolate", "baking", "special", "date-night"]
+  },
+  {
+    "id": 17,
+    "name": "Tiramisu",
+    "category": "Dessert",
+    "description": "Classic Italian no-bake dessert with layers of coffee-soaked ladyfingers and mascarpone cream.",
+    "imageUrl": "tiramisu.png",
+    "prepTimeMinutes": 30,
+    "cookTimeMinutes": 0,
+    "servings": 8,
+    "difficulty": "Medium",
+    "ingredients": [
+      "500g mascarpone cheese",
+      "4 egg yolks",
+      "1/2 cup sugar",
+      "2 cups strong espresso, cooled",
+      "2 tablespoons coffee liqueur (optional)",
+      "300g ladyfinger biscuits (savoiardi)",
+      "2 tablespoons cocoa powder for dusting",
+      "Dark chocolate shavings for garnish"
+    ],
+    "instructions": [
+      "Whisk egg yolks and sugar until thick and pale. Add mascarpone and mix until smooth.",
+      "Combine cooled espresso with coffee liqueur in a shallow dish.",
+      "Quickly dip each ladyfinger into the coffee mixture (don't soak too long or they'll get soggy).",
+      "Arrange a layer of dipped ladyfingers in the bottom of an 8x8 dish.",
+      "Spread half the mascarpone cream over the ladyfingers.",
+      "Repeat with another layer of dipped ladyfingers and remaining cream.",
+      "Dust generously with cocoa powder. Refrigerate for at least 4 hours (overnight is best). Serve chilled."
+    ],
+    "nutritionPerServing": {
+      "calories": 390,
+      "proteinGrams": 9.0,
+      "carbsGrams": 35.0,
+      "fatGrams": 24.0
+    },
+    "tags": ["dessert", "italian", "no-bake", "coffee", "special"]
+  },
+  {
+    "id": 18,
+    "name": "Mango Smoothie Bowl",
+    "category": "Snack",
+    "description": "A vibrant and refreshing smoothie bowl packed with tropical mango, topped with crunchy granola and fresh fruit.",
+    "imageUrl": "smoothie_bowl.png",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 0,
+    "servings": 2,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 cups frozen mango chunks",
+      "1 frozen banana",
+      "1/2 cup coconut milk",
+      "1 tablespoon honey",
+      "Toppings: granola, sliced banana, chia seeds, coconut flakes, fresh berries"
+    ],
+    "instructions": [
+      "Add frozen mango, frozen banana, coconut milk, and honey to a blender.",
+      "Blend until thick and smooth, scraping down sides as needed. Mixture should be thicker than a regular smoothie.",
+      "Pour into two bowls.",
+      "Arrange toppings in rows: granola, sliced banana, berries, chia seeds, and coconut flakes.",
+      "Serve immediately while still cold and thick."
+    ],
+    "nutritionPerServing": {
+      "calories": 310,
+      "proteinGrams": 5.0,
+      "carbsGrams": 62.0,
+      "fatGrams": 8.0
+    },
+    "tags": ["snack", "healthy", "vegan", "tropical", "no-cook"]
+  },
+  {
+    "id": 19,
+    "name": "Homemade Hummus",
+    "category": "Snack",
+    "description": "Creamy, dreamy homemade hummus with tahini, lemon, and garlic. Better than store-bought!",
+    "imageUrl": "hummus.png",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 0,
+    "servings": 6,
+    "difficulty": "Easy",
+    "ingredients": [
+      "400g can chickpeas, drained and rinsed",
+      "1/4 cup tahini",
+      "Juice of 1 lemon",
+      "2 garlic cloves",
+      "2 tablespoons olive oil",
+      "1/2 teaspoon cumin",
+      "Salt to taste",
+      "2-3 tablespoons cold water",
+      "Paprika and olive oil for garnish",
+      "Pita bread for serving"
+    ],
+    "instructions": [
+      "Add chickpeas, tahini, lemon juice, garlic, olive oil, cumin, and salt to a food processor.",
+      "Blend until smooth, adding cold water one tablespoon at a time for desired consistency.",
+      "Taste and adjust seasoning — add more lemon, salt, or garlic as needed.",
+      "Transfer to a serving bowl. Create a well with the back of a spoon.",
+      "Drizzle with olive oil and sprinkle with paprika.",
+      "Serve with warm pita bread or vegetable crudités."
+    ],
+    "nutritionPerServing": {
+      "calories": 160,
+      "proteinGrams": 6.0,
+      "carbsGrams": 16.0,
+      "fatGrams": 9.0
+    },
+    "tags": ["snack", "vegan", "mediterranean", "healthy", "dip"]
+  },
+  {
+    "id": 20,
+    "name": "Fresh Lemonade",
+    "category": "Beverage",
+    "description": "Crisp, refreshing homemade lemonade with the perfect balance of sweet and tart.",
+    "imageUrl": "lemonade.png",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 5,
+    "servings": 6,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 cup freshly squeezed lemon juice (4-6 lemons)",
+      "1/2 cup sugar (or to taste)",
+      "5 cups cold water",
+      "Lemon slices for garnish",
+      "Fresh mint sprigs",
+      "Ice cubes"
+    ],
+    "instructions": [
+      "Make simple syrup: heat 1 cup water with sugar until dissolved. Let cool.",
+      "Juice lemons until you have 1 cup of fresh juice. Strain out seeds and pulp if desired.",
+      "In a large pitcher, combine lemon juice, simple syrup, and remaining cold water.",
+      "Stir well and taste. Adjust sweetness or tartness to your liking.",
+      "Fill glasses with ice, pour lemonade, and garnish with lemon slices and mint.",
+      "For a sparkling version, replace half the water with sparkling water."
+    ],
+    "nutritionPerServing": {
+      "calories": 80,
+      "proteinGrams": 0.0,
+      "carbsGrams": 22.0,
+      "fatGrams": 0.0
+    },
+    "tags": ["beverage", "summer", "refreshing", "quick", "kid-friendly"]
+  },
+  {
+    "id": 21,
+    "name": "Berry Protein Smoothie",
+    "category": "Beverage",
+    "description": "A nutritious and energizing smoothie packed with mixed berries, protein, and almond milk.",
+    "imageUrl": "berry_smoothie.png",
+    "prepTimeMinutes": 5,
+    "cookTimeMinutes": 0,
+    "servings": 2,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 cup frozen mixed berries",
+      "1 banana",
+      "1 scoop vanilla protein powder",
+      "1 cup almond milk",
+      "1 tablespoon almond butter",
+      "1 tablespoon flax seeds",
+      "Honey to taste (optional)"
+    ],
+    "instructions": [
+      "Add all ingredients to a blender.",
+      "Blend on high until completely smooth, about 30-60 seconds.",
+      "Taste and add honey if additional sweetness is desired.",
+      "Pour into glasses and serve immediately."
+    ],
+    "nutritionPerServing": {
+      "calories": 260,
+      "proteinGrams": 16.0,
+      "carbsGrams": 32.0,
+      "fatGrams": 9.0
+    },
+    "tags": ["beverage", "smoothie", "healthy", "protein", "quick"]
+  },
+  {
+    "id": 22,
+    "name": "Beef Burger with Caramelized Onions",
+    "category": "Lunch",
+    "description": "A juicy homemade beef burger with melted cheese, caramelized onions, and special sauce.",
+    "imageUrl": "burger.png",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 15,
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "500g ground beef (80/20)",
+      "4 burger buns",
+      "4 slices cheddar cheese",
+      "1 large onion, sliced",
+      "1 tablespoon butter",
+      "Lettuce leaves",
+      "Tomato slices",
+      "Pickles",
+      "Salt and pepper to taste",
+      "Ketchup and mustard for serving"
+    ],
+    "instructions": [
+      "Caramelize onions: melt butter in a pan and cook sliced onions on low heat for 15 minutes until golden.",
+      "Divide ground beef into 4 equal portions and form into patties. Season generously with salt and pepper.",
+      "Grill or pan-fry patties over high heat for 3-4 minutes per side for medium.",
+      "Add cheese on top for the last minute. Cover to melt.",
+      "Toast burger buns cut-side down on the grill for 1 minute.",
+      "Assemble: bottom bun, lettuce, tomato, patty with cheese, caramelized onions, pickles, sauce, top bun."
+    ],
+    "nutritionPerServing": {
+      "calories": 560,
+      "proteinGrams": 35.0,
+      "carbsGrams": 38.0,
+      "fatGrams": 28.0
+    },
+    "tags": ["lunch", "burger", "comfort-food", "beef", "classic"]
+  },
+  {
+    "id": 23,
+    "name": "Minestrone Soup",
+    "category": "Soup",
+    "description": "A hearty Italian vegetable soup with beans, pasta, and seasonal vegetables in a rich tomato broth.",
+    "imageUrl": "minestrone.png",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 30,
+    "servings": 6,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 carrots, diced",
+      "2 celery stalks, diced",
+      "1 onion, diced",
+      "2 garlic cloves, minced",
+      "1 can kidney beans, drained",
+      "1 can diced tomatoes",
+      "1 cup small pasta shells",
+      "1 zucchini, diced",
+      "6 cups vegetable broth",
+      "2 tablespoons olive oil",
+      "1 teaspoon Italian herbs",
+      "Grated Parmesan for serving"
+    ],
+    "instructions": [
+      "Heat olive oil in a large pot. Sauté onion, carrots, and celery for 5 minutes.",
+      "Add garlic and Italian herbs. Cook for 1 minute.",
+      "Pour in vegetable broth and diced tomatoes. Bring to a boil.",
+      "Add pasta and cook for 8 minutes.",
+      "Add zucchini and kidney beans. Cook for 5 more minutes until vegetables are tender.",
+      "Season with salt and pepper. Serve with grated Parmesan cheese."
+    ],
+    "nutritionPerServing": {
+      "calories": 200,
+      "proteinGrams": 9.0,
+      "carbsGrams": 32.0,
+      "fatGrams": 5.0
+    },
+    "tags": ["soup", "italian", "vegetarian", "healthy", "comfort-food"]
+  },
+  {
+    "id": 24,
+    "name": "Banana Bread",
+    "category": "Snack",
+    "description": "Moist, tender banana bread with a golden crust. The perfect way to use up overripe bananas.",
+    "imageUrl": "banana_bread.png",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 55,
+    "servings": 10,
+    "difficulty": "Easy",
+    "ingredients": [
+      "3 ripe bananas, mashed",
+      "1/3 cup melted butter",
+      "3/4 cup sugar",
+      "1 egg, beaten",
+      "1 teaspoon vanilla extract",
+      "1 teaspoon baking soda",
+      "Pinch of salt",
+      "1 1/2 cups all-purpose flour",
+      "1/2 cup walnuts (optional)"
+    ],
+    "instructions": [
+      "Preheat oven to 175°C (350°F). Grease a 9x5 inch loaf pan.",
+      "In a mixing bowl, mash bananas with melted butter. Stir in sugar, egg, and vanilla.",
+      "Sprinkle baking soda and salt over the mixture. Stir in flour until just combined.",
+      "Fold in walnuts if using. Do not overmix.",
+      "Pour batter into the prepared loaf pan.",
+      "Bake for 50-55 minutes until a toothpick inserted in the center comes out clean.",
+      "Cool in the pan for 10 minutes, then transfer to a wire rack."
+    ],
+    "nutritionPerServing": {
+      "calories": 210,
+      "proteinGrams": 3.0,
+      "carbsGrams": 35.0,
+      "fatGrams": 7.0
+    },
+    "tags": ["snack", "baking", "banana", "sweet", "kid-friendly"]
+  },
+  {
+    "id": 25,
+    "name": "Iced Matcha Latte",
+    "category": "Beverage",
+    "description": "A smooth and creamy iced matcha latte with a vibrant green color and earthy flavor.",
+    "imageUrl": "matcha_latte.png",
+    "prepTimeMinutes": 5,
+    "cookTimeMinutes": 0,
+    "servings": 1,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 teaspoons matcha powder",
+      "2 tablespoons hot water (not boiling)",
+      "1 cup milk of choice",
+      "1 tablespoon honey or simple syrup",
+      "Ice cubes"
+    ],
+    "instructions": [
+      "Sift matcha powder into a bowl to remove any lumps.",
+      "Add hot water and whisk vigorously in a zigzag motion until smooth and frothy.",
+      "Sweeten with honey or simple syrup. Stir to dissolve.",
+      "Fill a glass with ice cubes and pour in the milk.",
+      "Pour the matcha mixture over the milk. Stir and enjoy!"
+    ],
+    "nutritionPerServing": {
+      "calories": 180,
+      "proteinGrams": 9.0,
+      "carbsGrams": 22.0,
+      "fatGrams": 6.0
+    },
+    "tags": ["beverage", "matcha", "iced", "healthy", "japanese"]
+  },
+  {
+    "id": 26,
+    "name": "Caprese Salad",
+    "category": "Salad",
+    "description": "A simple yet elegant Italian salad with fresh mozzarella, ripe tomatoes, and fragrant basil.",
+    "imageUrl": "caprese.png",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 0,
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "3 large ripe tomatoes, sliced",
+      "250g fresh mozzarella, sliced",
+      "Fresh basil leaves",
+      "3 tablespoons extra virgin olive oil",
+      "2 tablespoons balsamic glaze",
+      "Flaky sea salt",
+      "Freshly cracked black pepper"
+    ],
+    "instructions": [
+      "Alternate slices of tomato and mozzarella on a serving plate, overlapping slightly.",
+      "Tuck fresh basil leaves between the slices.",
+      "Drizzle generously with extra virgin olive oil.",
+      "Drizzle with balsamic glaze in a zigzag pattern.",
+      "Season with flaky sea salt and freshly cracked black pepper.",
+      "Serve immediately at room temperature."
+    ],
+    "nutritionPerServing": {
+      "calories": 250,
+      "proteinGrams": 14.0,
+      "carbsGrams": 8.0,
+      "fatGrams": 18.0
+    },
+    "tags": ["salad", "italian", "vegetarian", "no-cook", "quick"]
+  },
+  {
+    "id": 27,
+    "name": "Penne Arrabbiata",
+    "category": "Pasta",
+    "description": "A fiery Roman pasta dish with a spicy tomato sauce, garlic, and red chili peppers.",
+    "imageUrl": "arrabbiata.png",
+    "prepTimeMinutes": 5,
+    "cookTimeMinutes": 20,
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "400g penne pasta",
+      "400g canned crushed tomatoes",
+      "4 garlic cloves, sliced",
+      "2-3 dried red chili peppers, crushed",
+      "3 tablespoons olive oil",
+      "1/4 cup fresh parsley, chopped",
+      "Grated Pecorino Romano for serving",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "Cook penne in salted boiling water until al dente. Reserve some pasta water.",
+      "While pasta cooks, heat olive oil in a large pan. Sauté sliced garlic and crushed chili peppers for 1-2 minutes.",
+      "Add crushed tomatoes and simmer for 10-12 minutes until sauce thickens.",
+      "Season sauce with salt. Add drained pasta and toss to coat.",
+      "Add a splash of pasta water if sauce is too dry.",
+      "Serve with fresh parsley and grated Pecorino Romano."
+    ],
+    "nutritionPerServing": {
+      "calories": 420,
+      "proteinGrams": 14.0,
+      "carbsGrams": 68.0,
+      "fatGrams": 12.0
+    },
+    "tags": ["pasta", "italian", "spicy", "vegetarian", "quick"]
+  },
+  {
+    "id": 28,
+    "name": "Fish and Chips",
+    "category": "Seafood",
+    "description": "Crispy beer-battered fish with thick-cut chips, just like the British seaside classic.",
+    "imageUrl": "fish_chips.png",
+    "prepTimeMinutes": 20,
+    "cookTimeMinutes": 25,
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "4 cod or haddock fillets",
+      "1 1/2 cups all-purpose flour",
+      "1 cup beer (lager)",
+      "1 teaspoon baking powder",
+      "4 large potatoes, cut into thick chips",
+      "Vegetable oil for deep frying",
+      "Salt and malt vinegar",
+      "Tartar sauce and lemon wedges for serving",
+      "Mushy peas (optional)"
+    ],
+    "instructions": [
+      "Cut potatoes into thick chips and soak in cold water for 30 minutes. Drain and pat dry.",
+      "First fry chips at 160°C (320°F) for 5-6 minutes until soft but not colored. Drain and set aside.",
+      "Make batter: mix flour, baking powder, and a pinch of salt. Whisk in beer until smooth.",
+      "Heat oil to 180°C (350°F). Dust fish fillets in flour, then dip in batter.",
+      "Carefully lower battered fish into hot oil. Fry for 6-8 minutes until golden and crispy.",
+      "Second fry chips at 180°C for 3-4 minutes until crispy and golden. Drain on paper towels.",
+      "Season with salt and vinegar. Serve with tartar sauce, lemon wedges, and mushy peas."
+    ],
+    "nutritionPerServing": {
+      "calories": 620,
+      "proteinGrams": 32.0,
+      "carbsGrams": 65.0,
+      "fatGrams": 24.0
+    },
+    "tags": ["seafood", "british", "dinner", "fried", "classic"]
+  },
+  {
+    "id": 29,
+    "name": "New York Cheesecake",
+    "category": "Dessert",
+    "description": "A rich, dense, and creamy New York-style cheesecake with a buttery graham cracker crust.",
+    "imageUrl": "cheesecake.png",
+    "prepTimeMinutes": 25,
+    "cookTimeMinutes": 60,
+    "servings": 12,
+    "difficulty": "Hard",
+    "ingredients": [
+      "200g graham crackers, crushed",
+      "1/4 cup melted butter",
+      "900g cream cheese, room temperature",
+      "1 1/2 cups sugar",
+      "5 large eggs",
+      "2 teaspoons vanilla extract",
+      "1/4 cup all-purpose flour",
+      "1 cup sour cream",
+      "Berry compote for topping (optional)"
+    ],
+    "instructions": [
+      "Preheat oven to 160°C (325°F). Mix crushed graham crackers with melted butter and press into a springform pan.",
+      "Beat cream cheese until smooth. Gradually add sugar and beat until fluffy.",
+      "Add eggs one at a time, mixing on low speed after each addition. Do not overmix.",
+      "Mix in vanilla, flour, and sour cream until just combined.",
+      "Pour batter over crust. Wrap the pan in foil and place in a water bath.",
+      "Bake for 55-60 minutes until edges are set but center slightly jiggles.",
+      "Cool in the oven with the door cracked for 1 hour. Refrigerate at least 4 hours or overnight."
+    ],
+    "nutritionPerServing": {
+      "calories": 450,
+      "proteinGrams": 9.0,
+      "carbsGrams": 35.0,
+      "fatGrams": 31.0
+    },
+    "tags": ["dessert", "baking", "special", "cheesecake", "american"]
+  },
+  {
+    "id": 30,
+    "name": "Vegetable Pad Thai",
+    "category": "Dinner",
+    "description": "An authentic Thai street food favorite with rice noodles, vegetables, peanuts, and a tangy tamarind sauce.",
+    "imageUrl": "pad_thai.png",
+    "prepTimeMinutes": 20,
+    "cookTimeMinutes": 10,
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "250g flat rice noodles",
+      "2 eggs, lightly beaten",
+      "1 cup bean sprouts",
+      "1 cup firm tofu, cubed",
+      "2 carrots, julienned",
+      "4 green onions, sliced",
+      "3 tablespoons tamarind paste",
+      "2 tablespoons fish sauce (or soy sauce)",
+      "1 tablespoon sugar",
+      "2 tablespoons vegetable oil",
+      "Crushed peanuts for garnish",
+      "Lime wedges for serving"
+    ],
+    "instructions": [
+      "Soak rice noodles in warm water for 20 minutes until softened. Drain.",
+      "Mix tamarind paste, fish sauce, and sugar to make the sauce. Set aside.",
+      "Heat oil in a wok over high heat. Fry tofu until golden. Push to the side.",
+      "Pour beaten eggs into the wok and scramble until just set.",
+      "Add noodles, carrots, and sauce. Toss everything together for 2-3 minutes.",
+      "Add bean sprouts and green onions. Toss briefly.",
+      "Serve immediately with crushed peanuts, lime wedges, and extra bean sprouts."
+    ],
+    "nutritionPerServing": {
+      "calories": 380,
+      "proteinGrams": 14.0,
+      "carbsGrams": 55.0,
+      "fatGrams": 12.0
+    },
+    "tags": ["dinner", "thai", "asian", "vegetarian", "noodles"]
+  },
+  {
+    "id": 31,
+    "name": "Overnight Oats",
+    "category": "Breakfast",
+    "description": "Creamy overnight oats with chia seeds, topped with fresh fruit — a grab-and-go healthy breakfast.",
+    "imageUrl": "overnight_oats.png",
+    "prepTimeMinutes": 5,
+    "cookTimeMinutes": 0,
+    "servings": 2,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 cup rolled oats",
+      "1 cup milk of choice",
+      "2 tablespoons chia seeds",
+      "1 tablespoon maple syrup",
+      "1/2 teaspoon vanilla extract",
+      "Pinch of salt",
+      "Toppings: sliced banana, blueberries, almond butter, granola"
+    ],
+    "instructions": [
+      "Combine oats, milk, chia seeds, maple syrup, vanilla, and salt in a jar or container.",
+      "Stir well to combine. Cover and refrigerate overnight (or at least 4 hours).",
+      "In the morning, stir the oats and divide into serving bowls.",
+      "Top with sliced banana, blueberries, a drizzle of almond butter, and granola.",
+      "Enjoy cold straight from the fridge!"
+    ],
+    "nutritionPerServing": {
+      "calories": 300,
+      "proteinGrams": 10.0,
+      "carbsGrams": 48.0,
+      "fatGrams": 9.0
+    },
+    "tags": ["breakfast", "healthy", "meal-prep", "no-cook", "oats"]
+  },
+  {
+    "id": 32,
+    "name": "Chicken Quesadilla",
+    "category": "Lunch",
+    "description": "Crispy flour tortillas filled with seasoned chicken, melted cheese, and peppers. Quick and satisfying!",
+    "imageUrl": "quesadilla.png",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 10,
+    "servings": 2,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 large flour tortillas",
+      "1 cup cooked shredded chicken",
+      "1 cup shredded Mexican cheese blend",
+      "1/2 bell pepper, sliced",
+      "1/4 onion, sliced",
+      "1 teaspoon cumin",
+      "Sour cream and salsa for serving",
+      "Guacamole (optional)"
+    ],
+    "instructions": [
+      "Season shredded chicken with cumin. Sauté peppers and onions until soft.",
+      "Place one tortilla in a dry skillet over medium heat.",
+      "Sprinkle half the cheese on one half of the tortilla.",
+      "Top cheese with chicken, peppers, and onions. Add remaining cheese.",
+      "Fold tortilla over and press down gently. Cook for 2-3 minutes per side until golden and cheese melts.",
+      "Cut into wedges. Serve with sour cream, salsa, and guacamole."
+    ],
+    "nutritionPerServing": {
+      "calories": 420,
+      "proteinGrams": 30.0,
+      "carbsGrams": 28.0,
+      "fatGrams": 20.0
+    },
+    "tags": ["lunch", "mexican", "quick", "chicken", "cheese"]
+  },
+  {
+    "id": 33,
+    "name": "Mushroom Risotto",
+    "category": "Dinner",
+    "description": "A creamy Italian risotto with mixed mushrooms, Parmesan, and fresh thyme. Restaurant quality at home!",
+    "imageUrl": "risotto.png",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 30,
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1 1/2 cups Arborio rice",
+      "300g mixed mushrooms, sliced",
+      "1 onion, finely diced",
+      "2 garlic cloves, minced",
+      "1/2 cup white wine",
+      "4 cups warm chicken or vegetable broth",
+      "1/2 cup grated Parmesan",
+      "2 tablespoons butter",
+      "2 tablespoons olive oil",
+      "Fresh thyme leaves",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Heat broth in a saucepan and keep warm on low heat.",
+      "Sauté mushrooms in olive oil until golden. Season and set aside.",
+      "In the same pan, cook onion until translucent. Add garlic and rice. Toast for 2 minutes.",
+      "Pour in wine and stir until absorbed.",
+      "Add warm broth one ladle at a time, stirring constantly. Wait until each ladle is absorbed before adding the next.",
+      "After about 18-20 minutes, when rice is creamy and al dente, fold in mushrooms, butter, Parmesan, and thyme.",
+      "Season to taste. Serve immediately while creamy."
+    ],
+    "nutritionPerServing": {
+      "calories": 420,
+      "proteinGrams": 12.0,
+      "carbsGrams": 58.0,
+      "fatGrams": 15.0
+    },
+    "tags": ["dinner", "italian", "risotto", "mushroom", "vegetarian"]
+  },
+  {
+    "id": 34,
+    "name": "Chocolate Chip Cookies",
+    "category": "Dessert",
+    "description": "The ultimate chocolate chip cookies — crispy edges, chewy centers, and loaded with melty chocolate chunks.",
+    "imageUrl": "cookies.png",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 12,
+    "servings": 24,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 1/4 cups all-purpose flour",
+      "1 teaspoon baking soda",
+      "1 teaspoon salt",
+      "1 cup butter, softened",
+      "3/4 cup white sugar",
+      "3/4 cup brown sugar",
+      "2 teaspoons vanilla extract",
+      "2 large eggs",
+      "2 cups chocolate chips",
+      "1 cup chopped walnuts (optional)"
+    ],
+    "instructions": [
+      "Preheat oven to 190°C (375°F). Line baking sheets with parchment paper.",
+      "Whisk together flour, baking soda, and salt in a bowl.",
+      "Cream butter with white and brown sugars until light and fluffy. Beat in vanilla and eggs one at a time.",
+      "Gradually mix in flour mixture. Fold in chocolate chips and walnuts.",
+      "Drop rounded tablespoons of dough onto prepared baking sheets, spaced 2 inches apart.",
+      "Bake for 9-11 minutes until edges are golden but centers still look slightly underdone.",
+      "Cool on baking sheets for 2 minutes, then transfer to wire racks."
+    ],
+    "nutritionPerServing": {
+      "calories": 200,
+      "proteinGrams": 2.0,
+      "carbsGrams": 26.0,
+      "fatGrams": 10.0
+    },
+    "tags": ["dessert", "baking", "cookies", "chocolate", "kid-friendly"]
+  },
+  {
+    "id": 35,
+    "name": "Falafel Wrap",
+    "category": "Lunch",
+    "description": "Crispy homemade falafel wrapped in warm pita with fresh veggies, pickles, and tahini sauce.",
+    "imageUrl": "falafel.png",
+    "prepTimeMinutes": 20,
+    "cookTimeMinutes": 15,
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "400g can chickpeas, drained",
+      "1 onion, roughly chopped",
+      "4 garlic cloves",
+      "1/2 cup fresh parsley",
+      "1 teaspoon cumin",
+      "1 teaspoon coriander",
+      "3 tablespoons flour",
+      "Vegetable oil for frying",
+      "4 pita breads",
+      "Lettuce, tomatoes, cucumber, pickled turnips",
+      "Tahini sauce for drizzling"
+    ],
+    "instructions": [
+      "Pulse chickpeas, onion, garlic, parsley, cumin, coriander, flour, salt and pepper in a food processor until coarse.",
+      "Shape mixture into small balls or patties. Refrigerate for 30 minutes.",
+      "Heat oil to 180°C (350°F). Fry falafel for 3-4 minutes until golden brown and crispy.",
+      "Warm pita bread. Spread with tahini sauce.",
+      "Add lettuce, sliced tomatoes, cucumber, and pickled turnips.",
+      "Place falafel on top, drizzle with more tahini, and wrap tightly."
+    ],
+    "nutritionPerServing": {
+      "calories": 380,
+      "proteinGrams": 14.0,
+      "carbsGrams": 48.0,
+      "fatGrams": 14.0
+    },
+    "tags": ["lunch", "middle-eastern", "vegetarian", "vegan", "wrap"]
+  },
+  {
+    "id": 36,
+    "name": "Lobster Bisque",
+    "category": "Soup",
+    "description": "A luxurious, velvety French-style lobster bisque with a rich seafood flavor and a touch of cream.",
+    "imageUrl": "lobster_bisque.png",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 35,
+    "servings": 4,
+    "difficulty": "Hard",
+    "ingredients": [
+      "2 lobster tails",
+      "2 tablespoons butter",
+      "1 onion, diced",
+      "2 carrots, diced",
+      "1 celery stalk, diced",
+      "2 garlic cloves, minced",
+      "2 tablespoons tomato paste",
+      "1/4 cup brandy",
+      "3 cups seafood stock",
+      "1/2 cup heavy cream",
+      "Fresh chives for garnish",
+      "Salt and white pepper to taste"
+    ],
+    "instructions": [
+      "Steam lobster tails for 5-6 minutes. Remove meat and set aside. Reserve shells.",
+      "Sauté onion, carrots, and celery in butter until soft. Add garlic and tomato paste. Cook 2 minutes.",
+      "Add lobster shells and cook until fragrant. Add brandy and flambé carefully.",
+      "Pour in seafood stock. Simmer for 20 minutes.",
+      "Strain the soup, pressing on solids to extract all flavor. Discard solids.",
+      "Return liquid to pan. Stir in cream and chopped lobster meat. Heat through without boiling.",
+      "Season with salt and white pepper. Garnish with chives and serve with crusty bread."
+    ],
+    "nutritionPerServing": {
+      "calories": 320,
+      "proteinGrams": 18.0,
+      "carbsGrams": 14.0,
+      "fatGrams": 18.0
+    },
+    "tags": ["soup", "seafood", "french", "luxury", "special"]
+  }
+]
