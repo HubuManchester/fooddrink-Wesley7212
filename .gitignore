@@ -1,0 +1,19 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.vs/
+
+# VS Code
+.vscode/
+
+# NuGet
+*.nupkg
+
+# Test files
+TestApp/
+
+# PowerShell scripts
+*.ps1
