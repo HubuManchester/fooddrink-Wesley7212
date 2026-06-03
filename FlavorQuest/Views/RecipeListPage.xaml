@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:FlavorQuest.ViewModels"
+             xmlns:models="clr-namespace:FlavorQuest.Models"
+             x:Class="FlavorQuest.Views.RecipeListPage"
+             x:DataType="vm:RecipeListViewModel"
+             Title="{Binding Title}">
+
+    <Shell.NavBarIsVisible>True</Shell.NavBarIsVisible>
+
+    <Grid RowDefinitions="Auto,Auto,*" Padding="16">
+        <Button Grid.Row="0" Text="← Back"
+                Command="{Binding GoBackCommand}"
+                BackgroundColor="Transparent"
+                TextColor="{StaticResource Primary}"
+                FontSize="14" HorizontalOptions="Start"
+                Padding="8,4" Margin="0,0,0,8" />
+        <Label Grid.Row="1" Text="{Binding Title}"
+               FontSize="24" FontAttributes="Bold" Margin="0,0,0,12" />
+
+        <RefreshView Grid.Row="2" IsRefreshing="{Binding IsRefreshing}"
+                     Command="{Binding RefreshCommand}">
+            <CollectionView ItemsSource="{Binding Recipes}"
+                            SelectionMode="None"
+                            IsVisible="{Binding IsEmpty, Converter={StaticResource InverseBoolConverter}}">
+                <CollectionView.EmptyView>
+                    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center"
+                                         Spacing="12" Padding="32">
+                        <Label Text="🍽️" FontSize="64" HorizontalOptions="Center" />
+                        <Label Text="No recipes found" FontSize="20" FontAttributes="Bold"
+                               HorizontalOptions="Center" />
+                        <Label Text="Try adjusting your search or choosing a different category."
+                               FontSize="14" Opacity="0.6" HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center" />
+                    </VerticalStackLayout>
+                </CollectionView.EmptyView>
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="12" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Recipe">
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItems>
+                                    <SwipeItem Text="❤️ Toggle"
+                                               BackgroundColor="#E91E63"
+                                               Command="{Binding Source={RelativeSource AncestorType={x:Type vm:RecipeListViewModel}}, Path=ToggleFavoriteCommand}"
+                                               CommandParameter="{Binding .}" />
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+                            <Frame Padding="12" CornerRadius="12"
+                                   BorderColor="{StaticResource Gray200}"
+                                   BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:RecipeListViewModel}}, Path=GoToRecipeCommand}"
+                                        CommandParameter="{Binding .}" />
+                                </Frame.GestureRecognizers>
+                                <Grid ColumnDefinitions="70,*" ColumnSpacing="12">
+                                    <Frame Grid.Column="0" CornerRadius="8" Padding="0"
+                                           BackgroundColor="{Binding DifficultyColor}"
+                                           HeightRequest="70" WidthRequest="70">
+                                        <Label Text="🍽️" FontSize="30"
+                                               HorizontalOptions="Center" VerticalOptions="Center" />
+                                    </Frame>
+                                    <VerticalStackLayout Grid.Column="1" Spacing="4" VerticalOptions="Center">
+                                        <Grid ColumnDefinitions="*,Auto">
+                                            <Label Text="{Binding Name}" FontSize="16" FontAttributes="Bold"
+                                                   LineBreakMode="TailTruncation" />
+                                            <Label Grid.Column="1" Text="❤️"
+                                                   FontSize="18" VerticalOptions="Center"
+                                                   IsVisible="{Binding IsFavorite}" />
+                                        </Grid>
+                                        <Label Text="{Binding Description}" FontSize="13" Opacity="0.6"
+                                               MaxLines="2" LineBreakMode="TailTruncation" />
+                                        <HorizontalStackLayout Spacing="12">
+                                            <Label Text="{Binding TotalTimeDisplay, StringFormat='⏱ {0}'}"
+                                                   FontSize="12" Opacity="0.7" />
+                                            <Label Text="{Binding Difficulty, StringFormat='📊 {0}'}"
+                                                   FontSize="12" Opacity="0.7" />
+                                            <Label Text="{Binding Category}" FontSize="12" Opacity="0.7" />
+                                        </HorizontalStackLayout>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </Grid>
+</ContentPage>

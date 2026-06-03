@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:FlavorQuest.ViewModels"
+             xmlns:models="clr-namespace:FlavorQuest.Models"
+             x:Class="FlavorQuest.Views.MapPage"
+             x:DataType="vm:MapViewModel"
+             Title="{Binding Title}">
+
+    <Shell.NavBarIsVisible>True</Shell.NavBarIsVisible>
+
+    <Grid RowDefinitions="Auto,Auto,*" Padding="16">
+        <!-- Back Button -->
+        <Button Grid.Row="0" Text="← Back"
+                Command="{Binding GoBackCommand}"
+                BackgroundColor="Transparent"
+                TextColor="{StaticResource Primary}"
+                FontSize="14" HorizontalOptions="Start"
+                Padding="8,4" Margin="0,0,0,8" />
+
+        <VerticalStackLayout Grid.Row="1" Spacing="12">
+            <Frame Padding="12" CornerRadius="12" BorderColor="Transparent"
+                   BackgroundColor="{Binding HasLocationPermission, Converter={StaticResource BoolToColorConverter}}">
+                <Label Text="{Binding HasLocationPermission, StringFormat='{0}'}"
+                       FontSize="14" HorizontalTextAlignment="Center">
+                    <Label.Triggers>
+                        <DataTrigger TargetType="Label" Binding="{Binding HasLocationPermission}" Value="True">
+                            <Setter Property="Text" Value="📍 Location Access: Granted" />
+                        </DataTrigger>
+                        <DataTrigger TargetType="Label" Binding="{Binding HasLocationPermission}" Value="False">
+                            <Setter Property="Text" Value="⚠️ Location Access: Denied — Showing default area" />
+                        </DataTrigger>
+                    </Label.Triggers>
+                </Label>
+            </Frame>
+            <Label Text="{Binding LocationStatus}" FontSize="13" Opacity="0.7" HorizontalTextAlignment="Center" />
+            <VerticalStackLayout Spacing="6">
+                <Label Text="Filter by Cuisine" FontSize="14" FontAttributes="Bold" />
+                <Picker ItemsSource="{Binding CuisineTypes}"
+                        SelectedItem="{Binding SelectedCuisine}"
+                        Title="Select cuisine type" FontSize="14" />
+                <Button Text="Apply Filter"
+                        Command="{Binding FilterByCuisineCommand}"
+                        BackgroundColor="{StaticResource Primary}" TextColor="White"
+                        FontSize="13" HeightRequest="40" />
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+
+        <RefreshView Grid.Row="2" IsRefreshing="{Binding IsRefreshing}"
+                     Command="{Binding RefreshCommand}" Margin="0,12,0,0">
+            <CollectionView ItemsSource="{Binding Restaurants}" SelectionMode="None"
+                            IsVisible="{Binding IsEmpty, Converter={StaticResource InverseBoolConverter}}">
+                <CollectionView.EmptyView>
+                    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center"
+                                         Spacing="12" Padding="32">
+                        <Label Text="🍴" FontSize="64" HorizontalOptions="Center" />
+                        <Label Text="No restaurants found" FontSize="20" FontAttributes="Bold"
+                               HorizontalOptions="Center" />
+                        <Label Text="Try a different cuisine filter or check your location permissions."
+                               FontSize="14" Opacity="0.6" HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center" />
+                    </VerticalStackLayout>
+                </CollectionView.EmptyView>
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="12" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Restaurant">
+                        <Frame Padding="14" CornerRadius="12"
+                               BorderColor="{StaticResource Gray200}"
+                               BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}">
+                            <VerticalStackLayout Spacing="8">
+                                <Grid ColumnDefinitions="*,Auto">
+                                    <Label Text="{Binding Name}" FontSize="17" FontAttributes="Bold"
+                                           LineBreakMode="TailTruncation" />
+                                    <Frame Grid.Column="1" Padding="8,2" CornerRadius="8"
+                                           BorderColor="Transparent"
+                                           BackgroundColor="{Binding OpenStatusColor}">
+                                        <Label Text="{Binding OpenStatusText}" FontSize="11" TextColor="White" />
+                                    </Frame>
+                                </Grid>
+                                <HorizontalStackLayout Spacing="12">
+                                    <Label Text="{Binding RatingDisplay}" FontSize="13" />
+                                    <Label Text="{Binding PriceLevel}" FontSize="13" Opacity="0.6" />
+                                    <Label Text="{Binding CuisineType}" FontSize="13" Opacity="0.6" />
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout Spacing="6">
+                                    <Label Text="📍" FontSize="13" />
+                                    <Label Text="{Binding Address}" FontSize="13" Opacity="0.7"
+                                           LineBreakMode="TailTruncation" />
+                                </HorizontalStackLayout>
+                                <Label Text="{Binding DistanceDisplay, StringFormat='📏 {0} from you'}"
+                                       FontSize="13" Opacity="0.6" />
+                                <Grid ColumnDefinitions="*,*,*" ColumnSpacing="8">
+                                    <Button Grid.Column="0" Text="📞 Call"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MapViewModel}}, Path=CallRestaurantCommand}"
+                                            CommandParameter="{Binding .}"
+                                            BackgroundColor="#4CAF50" TextColor="White"
+                                            FontSize="12" HeightRequest="38" CornerRadius="8" />
+                                    <Button Grid.Column="1" Text="🗺 Navigate"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MapViewModel}}, Path=OpenInMapCommand}"
+                                            CommandParameter="{Binding .}"
+                                            BackgroundColor="#2196F3" TextColor="White"
+                                            FontSize="12" HeightRequest="38" CornerRadius="8" />
+                                    <Button Grid.Column="2" Text="📋 Copy"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MapViewModel}}, Path=CopyAddressCommand}"
+                                            CommandParameter="{Binding .}"
+                                            BackgroundColor="#9E9E9E" TextColor="White"
+                                            FontSize="12" HeightRequest="38" CornerRadius="8" />
+                                </Grid>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </Grid>
+</ContentPage>

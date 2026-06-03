@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:FlavorQuest.ViewModels"
+             xmlns:models="clr-namespace:FlavorQuest.Models"
+             x:Class="FlavorQuest.Views.HomePage"
+             x:DataType="vm:HomeViewModel"
+             Title="{Binding Title}">
+
+    <Grid RowDefinitions="Auto,*" Padding="16">
+        <VerticalStackLayout Grid.Row="0" Spacing="12">
+            <Label Text="FlavorQuest"
+                   FontSize="28" FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+            <Label Text="Discover, Cook &amp; Enjoy!"
+                   FontSize="16" HorizontalOptions="Center" Opacity="0.7" />
+            <SearchBar Placeholder="Search recipes, ingredients, tags..."
+                       Text="{Binding SearchQuery}"
+                       SearchCommand="{Binding SearchCommand}" />
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                <Button Grid.Column="0" Text="Scan Barcode"
+                        Command="{Binding GoToScanCommand}"
+                        BackgroundColor="#FF6B35" TextColor="White" />
+                <Button Grid.Column="1" Text="Nearby Places"
+                        Command="{Binding GoToMapCommand}"
+                        BackgroundColor="#4CAF50" TextColor="White" />
+            </Grid>
+        </VerticalStackLayout>
+
+        <ScrollView Grid.Row="1" Margin="0,12,0,0">
+            <VerticalStackLayout Spacing="16">
+                <ActivityIndicator IsRunning="{Binding IsBusy}"
+                                  IsVisible="{Binding IsBusy}"
+                                  HorizontalOptions="Center"
+                                  Color="{StaticResource Primary}" />
+
+                <Label Text="Categories" FontSize="20" FontAttributes="Bold" />
+                <CollectionView ItemsSource="{Binding Categories}"
+                                SelectionMode="None" HeightRequest="100">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" ItemSpacing="12" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Category">
+                            <Frame Padding="16,12" CornerRadius="12"
+                                   BorderColor="Transparent"
+                                   BackgroundColor="{Binding Color}"
+                                   MinimumWidthRequest="90">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:HomeViewModel}}, Path=GoToCategoryCommand}"
+                                        CommandParameter="{Binding .}" />
+                                </Frame.GestureRecognizers>
+                                <VerticalStackLayout Spacing="4" HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Label Text="{Binding Icon}" FontSize="32" HorizontalOptions="Center" />
+                                    <Label Text="{Binding Name}" FontSize="13" FontAttributes="Bold"
+                                           TextColor="White" HorizontalOptions="Center"
+                                           LineBreakMode="TailTruncation" />
+                                </VerticalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <Label Text="Featured Recipes" FontSize="20" FontAttributes="Bold" />
+                <CollectionView ItemsSource="{Binding FeaturedRecipes}" SelectionMode="None">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical" ItemSpacing="12" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Recipe">
+                            <Frame Padding="12" CornerRadius="12"
+                                   BorderColor="{StaticResource Gray200}"
+                                   BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:HomeViewModel}}, Path=GoToRecipeDetailCommand}"
+                                        CommandParameter="{Binding .}" />
+                                </Frame.GestureRecognizers>
+                                <Grid ColumnDefinitions="80,*" ColumnSpacing="12">
+                                    <Frame Grid.Column="0" CornerRadius="8" Padding="0"
+                                           BackgroundColor="{StaticResource Primary}" HeightRequest="80">
+                                        <Label Text="🍽️" FontSize="36"
+                                               HorizontalOptions="Center" VerticalOptions="Center" />
+                                    </Frame>
+                                    <VerticalStackLayout Grid.Column="1" Spacing="4" VerticalOptions="Center">
+                                        <Label Text="{Binding Name}" FontSize="16" FontAttributes="Bold"
+                                               LineBreakMode="TailTruncation" />
+                                        <Label Text="{Binding Description}" FontSize="13" Opacity="0.6"
+                                               MaxLines="2" LineBreakMode="TailTruncation" />
+                                        <HorizontalStackLayout Spacing="12">
+                                            <Label Text="{Binding TotalTimeDisplay, StringFormat='⏱ {0}'}"
+                                                   FontSize="12" Opacity="0.7" />
+                                            <Label Text="{Binding Difficulty, StringFormat='📊 {0}'}"
+                                                   FontSize="12" Opacity="0.7" />
+                                            <Label Text="{Binding Servings, StringFormat='👥 {0}'}"
+                                                   FontSize="12" Opacity="0.7" />
+                                        </HorizontalStackLayout>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <Frame Padding="12" CornerRadius="12"
+                       BackgroundColor="{AppThemeBinding Light=#FFF3E0, Dark=#3E2723}"
+                       BorderColor="Transparent">
+                    <HorizontalStackLayout Spacing="8" HorizontalOptions="Center">
+                        <Label Text="📱" FontSize="20" VerticalOptions="Center" />
+                        <Label Text="Shake your device to discover a random recipe!"
+                               FontSize="13" VerticalOptions="Center" Opacity="0.8" />
+                    </HorizontalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

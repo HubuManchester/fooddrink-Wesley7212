@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:FlavorQuest.ViewModels"
+             xmlns:models="clr-namespace:FlavorQuest.Models"
+             x:Class="FlavorQuest.Views.ScanPage"
+             x:DataType="vm:ScanViewModel"
+             Title="{Binding Title}">
+
+    <Shell.NavBarIsVisible>True</Shell.NavBarIsVisible>
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="16" Padding="16">
+            <!-- Back Button -->
+            <Button Text="← Back"
+                    Command="{Binding GoBackCommand}"
+                    BackgroundColor="Transparent"
+                    TextColor="{StaticResource Primary}"
+                    FontSize="14" HorizontalOptions="Start"
+                    Padding="8,4" />
+            <!-- Camera Status -->
+            <Frame Padding="12" CornerRadius="12" BorderColor="Transparent"
+                   BackgroundColor="{Binding IsCameraAvailable, Converter={StaticResource BoolToColorConverter}}">
+                <HorizontalStackLayout Spacing="8" HorizontalOptions="Center">
+                    <Label Text="{Binding IsCameraAvailable, StringFormat='{0}'}" FontSize="16">
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label" Binding="{Binding IsCameraAvailable}" Value="True">
+                                <Setter Property="Text" Value="📷 Camera Ready" />
+                            </DataTrigger>
+                            <DataTrigger TargetType="Label" Binding="{Binding IsCameraAvailable}" Value="False">
+                                <Setter Property="Text" Value="⚠️ Camera Unavailable" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <!-- Manual Barcode Entry -->
+            <VerticalStackLayout Spacing="8">
+                <Label Text="Enter Barcode Manually" FontSize="20" FontAttributes="Bold" />
+                <Label Text="Type a barcode number to look up food product information." FontSize="13" Opacity="0.6" />
+                <Entry Placeholder="Enter barcode number (e.g. 3017620422003)"
+                       Text="{Binding BarcodeText}" Keyboard="Numeric"
+                       ClearButtonVisibility="WhileEditing" FontSize="14"
+                       ReturnType="Search" ReturnCommand="{Binding LookupBarcodeCommand}" />
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <Button Grid.Column="0" Text="🔍 Look Up"
+                            Command="{Binding LookupBarcodeCommand}"
+                            BackgroundColor="{StaticResource Primary}" TextColor="White" />
+                    <Button Grid.Column="1" Text="🎲 Simulate Scan"
+                            Command="{Binding SimulateScanCommand}"
+                            BackgroundColor="#FF9800" TextColor="White" />
+                </Grid>
+            </VerticalStackLayout>
+
+            <!-- Status -->
+            <Frame Padding="12" CornerRadius="8"
+                   BorderColor="{StaticResource Gray200}"
+                   BackgroundColor="{AppThemeBinding Light=#FAFAFA, Dark=#1E1E1E}">
+                <Label Text="{Binding StatusMessage}" FontSize="13"
+                       HorizontalTextAlignment="Center" />
+            </Frame>
+
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"
+                              HorizontalOptions="Center" Color="{StaticResource Primary}" />
+
+            <!-- Result -->
+            <VerticalStackLayout Spacing="12" IsVisible="{Binding HasResult}">
+                <Label Text="Product Information" FontSize="20" FontAttributes="Bold" />
+                <Frame Padding="16" CornerRadius="12"
+                       BorderColor="{StaticResource Gray200}"
+                       BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}">
+                    <VerticalStackLayout Spacing="12">
+                        <Frame HeightRequest="120" CornerRadius="8" Padding="0"
+                               BackgroundColor="{AppThemeBinding Light=#F5F5F5, Dark=#2A2A2A}"
+                               BorderColor="Transparent">
+                            <Label Text="📦" FontSize="48" HorizontalOptions="Center" VerticalOptions="Center" />
+                        </Frame>
+                        <Label Text="{Binding ScannedProduct.ProductName}" FontSize="20" FontAttributes="Bold" />
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="Brand:" FontSize="14" Opacity="0.6" />
+                            <Label Text="{Binding ScannedProduct.Brand}" FontSize="14" FontAttributes="Bold" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="Barcode:" FontSize="14" Opacity="0.6" />
+                            <Label Text="{Binding ScannedProduct.Barcode}" FontSize="14" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="Serving Size:" FontSize="14" Opacity="0.6" />
+                            <Label Text="{Binding ScannedProduct.ServingSize}" FontSize="14" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="Scanned:" FontSize="14" Opacity="0.6" />
+                            <Label Text="{Binding ScannedProduct.ScanDate, StringFormat='{0:g}'}" FontSize="14" />
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Nutrition -->
+                <Label Text="Nutrition (per 100g)" FontSize="18" FontAttributes="Bold" />
+                <Frame Padding="16" CornerRadius="12"
+                       BackgroundColor="{AppThemeBinding Light=#F5F5F5, Dark=#2A2A2A}"
+                       BorderColor="Transparent">
+                    <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto"
+                          ColumnSpacing="12" RowSpacing="12">
+                        <VerticalStackLayout Grid.Column="0" Grid.Row="0">
+                            <Label Text="Calories" FontSize="12" Opacity="0.6" />
+                            <Label Text="{Binding ScannedProduct.Calories, StringFormat='{0:F0} kcal'}"
+                                   FontSize="16" FontAttributes="Bold" />
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Column="1" Grid.Row="0">
+                            <Label Text="Protein" FontSize="12" Opacity="0.6" />
+                            <Label Text="{Binding ScannedProduct.ProteinGrams, StringFormat='{0:F1}g'}"
+                                   FontSize="16" FontAttributes="Bold" />
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Column="0" Grid.Row="1">
+                            <Label Text="Carbohydrates" FontSize="12" Opacity="0.6" />
+                            <Label Text="{Binding ScannedProduct.CarbsGrams, StringFormat='{0:F1}g'}"
+                                   FontSize="16" FontAttributes="Bold" />
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Column="1" Grid.Row="1">
+                            <Label Text="Fat" FontSize="12" Opacity="0.6" />
+                            <Label Text="{Binding ScannedProduct.FatGrams, StringFormat='{0:F1}g'}"
+                                   FontSize="16" FontAttributes="Bold" />
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Column="0" Grid.Row="2">
+                            <Label Text="Fiber" FontSize="12" Opacity="0.6" />
+                            <Label Text="{Binding ScannedProduct.FiberGrams, StringFormat='{0:F1}g'}"
+                                   FontSize="16" FontAttributes="Bold" />
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Column="1" Grid.Row="2">
+                            <Label Text="Sugar" FontSize="12" Opacity="0.6" />
+                            <Label Text="{Binding ScannedProduct.SugarGrams, StringFormat='{0:F1}g'}"
+                                   FontSize="16" FontAttributes="Bold" />
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Column="0" Grid.Row="3">
+                            <Label Text="Sodium" FontSize="12" Opacity="0.6" />
+                            <Label Text="{Binding ScannedProduct.SodiumMg, StringFormat='{0:F0} mg'}"
+                                   FontSize="16" FontAttributes="Bold" />
+                        </VerticalStackLayout>
+                    </Grid>
+                </Frame>
+
+                <Button Text="🗑 Clear &amp; Scan Another"
+                        Command="{Binding ClearScanCommand}"
+                        BackgroundColor="#F44336" TextColor="White" />
+            </VerticalStackLayout>
+            <BoxView HeightRequest="16" Color="Transparent" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

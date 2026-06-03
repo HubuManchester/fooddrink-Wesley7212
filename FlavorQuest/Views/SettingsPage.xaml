@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:FlavorQuest.ViewModels"
+             x:Class="FlavorQuest.Views.SettingsPage"
+             x:DataType="vm:SettingsViewModel"
+             Title="{Binding Title}">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="16" Padding="16">
+            <Label Text="⚙️ Settings" FontSize="24" FontAttributes="Bold" />
+
+            <!-- Appearance -->
+            <Frame Padding="16" CornerRadius="12"
+                   BorderColor="{StaticResource Gray200}"
+                   BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Appearance" FontSize="18" FontAttributes="Bold" />
+                    <Grid ColumnDefinitions="*,Auto">
+                        <VerticalStackLayout VerticalOptions="Center">
+                            <Label Text="🌙 Dark Mode" FontSize="15" FontAttributes="Bold" />
+                            <Label Text="Switch between light and dark theme." FontSize="12" Opacity="0.6" />
+                        </VerticalStackLayout>
+                        <Switch x:Name="DarkModeSwitch" Grid.Column="1"
+                                IsToggled="{Binding Settings.DarkModeEnabled}"
+                                Toggled="OnDarkModeToggled"
+                                OnColor="{StaticResource Primary}" />
+                    </Grid>
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="🔤 Font Size" FontSize="15" FontAttributes="Bold" />
+                        <Label Text="Adjust the app font size for better readability." FontSize="12" Opacity="0.6" />
+                        <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="12">
+                            <Button Grid.Column="0" Text="A−"
+                                    Command="{Binding DecreaseFontSizeCommand}"
+                                    BackgroundColor="{StaticResource Gray300}" TextColor="White"
+                                    FontSize="16" WidthRequest="48" HeightRequest="40" CornerRadius="8" />
+                            <Frame Grid.Column="1" CornerRadius="8" Padding="0"
+                                   BorderColor="{StaticResource Gray200}"
+                                   BackgroundColor="{AppThemeBinding Light=#F5F5F5, Dark=#2A2A2A}"
+                                   VerticalOptions="Center">
+                                <Label Text="{Binding FontSizeDisplay}" FontSize="14"
+                                       HorizontalOptions="Center" VerticalOptions="Center" />
+                            </Frame>
+                            <Button Grid.Column="2" Text="A+"
+                                    Command="{Binding IncreaseFontSizeCommand}"
+                                    BackgroundColor="{StaticResource Primary}" TextColor="White"
+                                    FontSize="16" WidthRequest="48" HeightRequest="40" CornerRadius="8" />
+                        </Grid>
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Accessibility -->
+            <Frame Padding="16" CornerRadius="12"
+                   BorderColor="{StaticResource Gray200}"
+                   BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Accessibility" FontSize="18" FontAttributes="Bold" />
+                    <Grid ColumnDefinitions="*,Auto">
+                        <VerticalStackLayout VerticalOptions="Center">
+                            <Label Text="🔊 Text-to-Speech" FontSize="15" FontAttributes="Bold" />
+                            <Label Text="Read recipes aloud using your device's TTS engine." FontSize="12" Opacity="0.6" />
+                        </VerticalStackLayout>
+                        <Switch x:Name="TtsSwitch" Grid.Column="1"
+                                IsToggled="{Binding Settings.TextToSpeechEnabled}"
+                                Toggled="OnTtsToggled"
+                                OnColor="{StaticResource Primary}" />
+                    </Grid>
+                    <BoxView HeightRequest="1" Color="{StaticResource Gray200}" Opacity="0.5" />
+                    <Grid ColumnDefinitions="*,Auto">
+                        <VerticalStackLayout VerticalOptions="Center">
+                            <Label Text="📳 Haptic Feedback" FontSize="15" FontAttributes="Bold" />
+                            <Label Text="Vibrate on interactions for tactile feedback." FontSize="12" Opacity="0.6" />
+                        </VerticalStackLayout>
+                        <Switch x:Name="HapticSwitch" Grid.Column="1"
+                                IsToggled="{Binding Settings.HapticFeedbackEnabled}"
+                                Toggled="OnHapticToggled"
+                                OnColor="{StaticResource Primary}" />
+                    </Grid>
+                    <BoxView HeightRequest="1" Color="{StaticResource Gray200}" Opacity="0.5" />
+                    <Grid ColumnDefinitions="*,Auto">
+                        <VerticalStackLayout VerticalOptions="Center">
+                            <Label Text="📱 Shake to Discover" FontSize="15" FontAttributes="Bold" />
+                            <Label Text="Shake your device to get a random recipe suggestion." FontSize="12" Opacity="0.6" />
+                        </VerticalStackLayout>
+                        <Switch x:Name="ShakeSwitch" Grid.Column="1"
+                                IsToggled="{Binding Settings.ShakeToDiscoverEnabled}"
+                                Toggled="OnShakeToggled"
+                                OnColor="{StaticResource Primary}" />
+                    </Grid>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Hardware Features -->
+            <Frame Padding="16" CornerRadius="12"
+                   BorderColor="{StaticResource Gray200}"
+                   BackgroundColor="{AppThemeBinding Light=#E3F2FD, Dark=#0D47A1}">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="🔧 Hardware Features Used" FontSize="16" FontAttributes="Bold" />
+                    <HorizontalStackLayout Spacing="6">
+                        <Label Text="📷" FontSize="14" />
+                        <Label Text="Camera — Barcode Scanner" FontSize="13" Opacity="0.8" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="6">
+                        <Label Text="📍" FontSize="14" />
+                        <Label Text="GPS — Nearby Restaurants" FontSize="13" Opacity="0.8" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="6">
+                        <Label Text="🔊" FontSize="14" />
+                        <Label Text="Speaker — Text-to-Speech" FontSize="13" Opacity="0.8" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="6">
+                        <Label Text="📳" FontSize="14" />
+                        <Label Text="Vibrator — Haptic Feedback" FontSize="13" Opacity="0.8" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="6">
+                        <Label Text="📱" FontSize="14" />
+                        <Label Text="Accelerometer — Shake Detection" FontSize="13" Opacity="0.8" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="6">
+                        <Label Text="📞" FontSize="14" />
+                        <Label Text="Phone Dialer — Restaurant Calls" FontSize="13" Opacity="0.8" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="6">
+                        <Label Text="🗺" FontSize="14" />
+                        <Label Text="Maps — Navigation" FontSize="13" Opacity="0.8" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- About -->
+            <Frame Padding="16" CornerRadius="12"
+                   BorderColor="{StaticResource Gray200}"
+                   BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}">
+                <VerticalStackLayout Spacing="4">
+                    <Label Text="About" FontSize="18" FontAttributes="Bold" />
+                    <Label Text="FlavorQuest v1.0" FontSize="14" />
+                    <Label Text="Discover, cook &amp; enjoy delicious recipes." FontSize="13" Opacity="0.6" />
+                    <Label Text="Built with .NET MAUI" FontSize="12" Opacity="0.5" Margin="0,4,0,0" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="🔄 Reset All Settings"
+                    Command="{Binding ResetAllSettingsCommand}"
+                    BackgroundColor="#FF5722" TextColor="White"
+                    FontSize="14" CornerRadius="12" />
+            <BoxView HeightRequest="16" Color="Transparent" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
